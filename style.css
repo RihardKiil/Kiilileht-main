@@ -1,0 +1,783 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideShow 20s infinite;
+    opacity: 0;
+}
+
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 4s; }
+.slide:nth-child(3) { animation-delay: 8s; }
+.slide:nth-child(4) { animation-delay: 12s; }
+.slide:nth-child(5) { animation-delay: 16s; }
+
+@keyframes slideShow {
+    0%, 20% { opacity: 1; }
+    25%, 100% { opacity: 0; }
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Majutus Section */
+#majutus {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.majutused {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.majutus-kaart {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.majutus-kaart:hover {
+    transform: translateY(-5px);
+}
+
+.majutus-kaart img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.majutus-kaart h3, 
+.majutus-kaart p {
+    padding: 0.5rem 1rem;
+}
+
+.hind {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+/* Teenused Section */
+#teenused {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.teenused-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.teenus {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Kontakt Section */
+#kontakt {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kontakt-info {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Maja detail leht */
+.maja-detail {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 20px;
+}
+
+.maja-detail h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.maja-galerii {
+    margin-bottom: 40px;
+}
+
+.peamine-pilt {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pisipildid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.pisipildid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.pisipildid img:hover {
+    opacity: 0.8;
+}
+
+.maja-info {
+    display: grid;
+    gap: 30px;
+}
+
+.hind-ja-broneering {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.info-sektsioon {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info-sektsioon h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.info-sektsioon ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-sektsioon li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.info-sektsioon li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+}
+
+.book-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.book-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 0.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .maja-detail {
+        margin-top: 60px;
+    }
+    
+    .peamine-pilt {
+        height: 300px;
+    }
+    
+    .hind-ja-broneering {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* Kontakti lehe stiilid */
+.kontakt-leht {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 20px;
+}
+
+.kontakt-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.kontakt-info-detail {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.info-rida {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.info-rida i {
+    font-size: 24px;
+    margin-right: 15px;
+    color: #4CAF50;
+}
+
+.sotsiaalmeedia {
+    margin-top: 20px;
+}
+
+.sotsiaalmeedia h3 {
+    margin-bottom: 15px;
+}
+
+.some-link {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 24px;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.some-link:hover {
+    transform: translateY(-3px);
+}
+
+.some-link .fa-facebook:hover {
+    color: #1877f2;
+}
+
+.some-link .fa-instagram:hover {
+    color: #e4405f;
+}
+
+.kontakt-vorm {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.vorm-grupp {
+    margin-bottom: 20px;
+}
+
+.vorm-grupp label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.vorm-grupp input,
+.vorm-grupp textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.vorm-grupp textarea {
+    resize: vertical;
+}
+
+.saada-nupp {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.saada-nupp:hover {
+    background-color: #45a049;
+}
+
+.kaart-sektsioon {
+    margin-top: 40px;
+}
+
+/* Broneerimise lehe stiilid */
+.broneeri-leht {
+    max-width: 800px;
+    margin: 80px auto 40px;
+    padding: 20px;
+}
+
+.broneeringu-vorm {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.broneeringu-vorm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+}
+
+.broneeri-nupp {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.broneeri-nupp:hover {
+    background-color: #45a049;
+}
+
+/* Kuupäeva valiku stiilid */
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Responsive disain */
+@media (max-width: 768px) {
+    .kontakt-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-rida {
+        margin: 15px 0;
+    }
+    
+    .some-link {
+        font-size: 20px;
+    }
+    
+    .vorm-grupp input,
+    .vorm-grupp textarea,
+    .vorm-grupp select {
+        font-size: 14px;
+    }
+}
+
+/* Teate stiilid */
+.teade {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+}
+
+.teade-edukas {
+    background-color: #4CAF50;
+}
+
+.teade-viga {
+    background-color: #f44336;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.majutuse-valik {
+    margin-bottom: 30px;
+}
+
+.majutuse-valikud {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.majutus-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.majutus-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.majutus-checkbox label {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .majutuse-valikud {
+        grid-template-columns: 1fr;
+    }
+}
+
+.majutuste-konteiner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.majutus-valik {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+.majutus-valik:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.majutus-valik h4 {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.majutus-valik p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 12px 0;
+}
+
+.majutus-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+}
+
+.majutus-select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.hind-info {
+    background: #f0f8f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.hind-info p {
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+/* Mobiilivaade */
+@media (max-width: 768px) {
+    .majutuste-konteiner {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Hoiatuse stiil */
+.hoiatus {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+}
+
+.hoiatus.naita {
+    display: block;
+}
+
+/* Sektsioonide pealkirjade ühtlustamine */
+section h2 {
+    text-align: center;
+    margin: 40px 0;
+    color: #333;
+    font-size: 2em;
+}
+
+/* Rippmenüü stiilid */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #4CAF50;
+}
+
+/* Nool rippmenüü nupu juurde */
+.dropbtn::after {
+    content: '▼';
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+/* Mobiilivaate kohandused */
+@media screen and (max-width: 768px) {
+    .dropdown-content {
+        position: static;
+        background-color: #f9f9f9;
+        box-shadow: none;
+        display: none;
+        width: 100%;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding: 10px 20px;
+    }
+}
+
+.teenus-pilt {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.teenus-pilt:hover {
+    transform: scale(1.05);
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-link:hover {
+    opacity: 0.9;
+}

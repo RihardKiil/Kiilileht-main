@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Järvemaja - Kiili Puhkemaja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#avaleht" class="logo-link">
+                    <img src="logo.png" alt="Kiili Puhkemajutus Logo" class="logo-img">
+                    <span class="logo-text">Kiili Puhkemajutus</span>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html#avaleht">Avaleht</a></li>
+                <li class="dropdown">
+                    <a href="index.html#majutus" class="dropbtn">Majutus</a>
+                    <div class="dropdown-content">
+                        <a href="villa.html">Villa</a>
+                        <a href="kapteni-maja.html">Kapteni maja</a>
+                        <a href="jarvemaja.html">Järvemaja</a>
+                        <a href="rannamaja.html">Rannamaja</a>
+                    </div>
+                </li>
+                <li><a href="index.html#teenused">Teenused</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="maja-detail">
+        <h1>Järvemaja</h1>
+        
+        <div class="maja-galerii">
+            <img src="jarve1.jpg" alt="Järvemaja pilt 1" class="peamine-pilt">
+            <div class="pisipildid">
+                <img src="jarve1.jpg" alt="Järvemaja pilt 1" onclick="vahetaPilt(this.src)">
+                <img src="jarve2.jpg" alt="Järvemaja pilt 2" onclick="vahetaPilt(this.src)">
+                <img src="jarve3.jpg" alt="Järvemaja pilt 3" onclick="vahetaPilt(this.src)">
+            </div>
+        </div>
+
+        <div class="maja-info">
+            <div class="hind-ja-broneering">
+                <p class="hind">Alates 80€/öö</p>
+                <a href="broneeri.html?maja=jarve" class="book-button">Broneeri</a>
+            </div>
+
+            <div class="info-sektsioon">
+                <h2>Majutuse info</h2>
+                <ul>
+                    <li>Mahutab kuni 4 inimest</li>
+                    <li>2 magamistuba</li>
+                    <li>1 vannituba</li>
+                    <li>Täisvarustatud köök</li>
+                </ul>
+            </div>
+
+            <div class="info-sektsioon">
+                <h2>Mugavused</h2>
+                <ul>
+                    <li>TV</li>
+                    <li>WiFi</li>
+                    <li>Grillimise võimalus</li>
+                    <li>Terrass järvevaatega</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ungru Puhkemajutus. Kõik õigused kaitstud.</p>
+    </footer>
+
+    <script src="maja-detail.js"></script>
+</body>
+</html>

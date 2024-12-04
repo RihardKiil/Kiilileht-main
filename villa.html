@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa - Kiili Puhkemaja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#avaleht" class="logo-link">
+                    <img src="logo.png" alt="Kiili Puhkemajutus Logo" class="logo-img">
+                    <span class="logo-text">Kiili Puhkemajutus</span>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html#avaleht">Avaleht</a></li>
+                <li class="dropdown">
+                    <a href="index.html#majutus" class="dropbtn">Majutus</a>
+                    <div class="dropdown-content">
+                        <a href="villa.html">Villa</a>
+                        <a href="kapteni-maja.html">Kapteni maja</a>
+                        <a href="jarvemaja.html">Järvemaja</a>
+                        <a href="rannamaja.html">Rannamaja</a>
+                    </div>
+                </li>
+                <li><a href="index.html#teenused">Teenused</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="maja-detail">
+        <h1>Villa</h1>
+        
+        <div class="maja-galerii">
+            <img src="villa1.jpg" alt="Villa pilt 1" class="peamine-pilt">
+            <div class="pisipildid">
+                <img src="villa1.jpg" alt="Villa pilt 1" onclick="vahetaPilt(this.src)">
+                <img src="villa2.jpg" alt="Villa pilt 2" onclick="vahetaPilt(this.src)">
+                <img src="villa3.jpg" alt="Villa pilt 3" onclick="vahetaPilt(this.src)">
+            </div>
+        </div>
+
+        <div class="maja-info">
+            <div class="hind-ja-broneering">
+                <p class="hind">Alates 120€/öö</p>
+                <a href="broneeri.html?maja=villa" class="book-button">Broneeri</a>
+            </div>
+
+            <div class="info-sektsioon">
+                <h2>Majutuse info</h2>
+                <ul>
+                    <li>Mahutab kuni 6 inimest</li>
+                    <li>3 magamistuba</li>
+                    <li>2 vannituba</li>
+                    <li>Täisvarustatud köök</li>
+                </ul>
+            </div>
+
+            <div class="info-sektsioon">
+                <h2>Mugavused</h2>
+                <ul>
+                    <li>Saun</li>
+                    <li>TV</li>
+                    <li>WiFi</li>
+                    <li>Grillimise võimalus</li>
+                    <li>Terrass</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ungru Puhkemajutus. Kõik õigused kaitstud.</p>
+    </footer>
+
+    <script src="maja-detail.js"></script>
+</body>
+</html>

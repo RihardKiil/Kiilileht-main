@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broneerimine - Kiili Puhkemaja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#avaleht" class="logo-link">
+                    <img src="logo.png" alt="Kiili Puhkemajutus Logo" class="logo-img">
+                    <span class="logo-text">Kiili Puhkemajutus</span>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html#avaleht">Avaleht</a></li>
+                <li class="dropdown">
+                    <a href="index.html#majutus" class="dropbtn">Majutus</a>
+                    <div class="dropdown-content">
+                        <a href="villa.html">Villa</a>
+                        <a href="kapteni-maja.html">Kapteni maja</a>
+                        <a href="jarvemaja.html">Järvemaja</a>
+                        <a href="rannamaja.html">Rannamaja</a>
+                    </div>
+                </li>
+                <li><a href="index.html#teenused">Teenused</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="broneeri-leht">
+        <h1>Broneeri majutus</h1>
+        
+        <div class="broneeringu-vorm">
+            <form id="broneerimisVorm" onsubmit="return saidaBroneering(event)">
+                <div class="vorm-grupp majutuse-valik">
+                    <h3>Vali majutused:</h3>
+                    <div class="majutuste-konteiner">
+                        <!-- Villa -->
+                        <div class="majutus-valik">
+                            <h4>Villa (120€/öö)</h4>
+                            <p>Mahutab kuni 6 inimest</p>
+                            <select name="villa" id="villa" class="majutus-select">
+                                <option value="0">Ei soovi</option>
+                                <option value="1">1 villa</option>
+                            </select>
+                        </div>
+
+                        <!-- Kapteni maja -->
+                        <div class="majutus-valik">
+                            <h4>Kapteni maja (100€/öö)</h4>
+                            <p>Mahutab kuni 5 inimest</p>
+                            <select name="kapteni" id="kapteni" class="majutus-select">
+                                <option value="0">Ei soovi</option>
+                                <option value="1">1 maja</option>
+                            </select>
+                        </div>
+
+                        <!-- Järvemajad -->
+                        <div class="majutus-valik">
+                            <h4>Järvemaja (80€/öö)</h4>
+                            <p>Mahutab kuni 4 inimest</p>
+                            <select name="jarve" id="jarve" class="majutus-select">
+                                <option value="0">Ei soovi</option>
+                                <option value="1">1 maja</option>
+                                <option value="2">2 maja</option>
+                                <option value="3">3 maja</option>
+                                <option value="4">4 maja</option>
+                            </select>
+                        </div>
+
+                        <!-- Rannamajad -->
+                        <div class="majutus-valik">
+                            <h4>Rannamaja (50€/öö)</h4>
+                            <p>Mahutab kuni 2 inimest</p>
+                            <select name="ranna" id="ranna" class="majutus-select">
+                                <option value="0">Ei soovi</option>
+                                <option value="1">1 maja</option>
+                                <option value="2">2 maja</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vorm-grupp">
+                    <label for="saabumis_kuupaev">Saabumise kuupäev:</label>
+                    <input type="date" id="saabumis_kuupaev" name="saabumis_kuupaev" required>
+                </div>
+
+                <div class="vorm-grupp">
+                    <label for="lahkumis_kuupaev">Lahkumise kuupäev:</label>
+                    <input type="date" id="lahkumis_kuupaev" name="lahkumis_kuupaev" required>
+                </div>
+
+                <div class="vorm-grupp">
+                    <label for="inimeste_arv">Inimeste arv kokku:</label>
+                    <input type="number" id="inimeste_arv" name="inimeste_arv" min="1" required>
+                </div>
+
+                <div class="vorm-grupp">
+                    <label for="eesnimi">Eesnimi:</label>
+                    <input type="text" id="eesnimi" name="eesnimi" required>
+                </div>
+
+                <div class="vorm-grupp">
+                    <label for="perenimi">Perekonnanimi:</label>
+                    <input type="text" id="perenimi" name="perenimi" required>
+                </div>
+
+                <div class="vorm-grupp">
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="vorm-grupp">
+                    <label for="telefon">Telefon:</label>
+                    <input type="tel" id="telefon" name="telefon" required>
+                </div>
+
+                <div class="vorm-grupp">
+                    <label for="markused">Lisamärkused:</label>
+                    <textarea id="markused" name="markused" rows="4"></textarea>
+                </div>
+
+                <div class="hind-info">
+                    <p>Valitud majutuste maksimaalne mahutavus: <span id="maxInimesi">0</span> inimest</p>
+                    <p>Broneeringu hind kokku: <span id="koguHind">0€</span></p>
+                </div>
+
+                <button type="submit" class="broneeri-nupp">Saada broneering</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Kiili Puhkemajutus. Kõik õigused kaitstud.</p>
+    </footer>
+
+    <script src="broneeri.js"></script>
+</body>
+</html>

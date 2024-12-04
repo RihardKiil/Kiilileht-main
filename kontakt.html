@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Kiili Puhkemaja</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#avaleht" class="logo-link">
+                    <img src="logo.png" alt="Kiili Puhkemajutus Logo" class="logo-img">
+                    <span class="logo-text">Kiili Puhkemajutus</span>
+                </a>
+            </div>
+            <ul>
+                <li><a href="index.html#avaleht">Avaleht</a></li>
+                <li class="dropdown">
+                    <a href="index.html#majutus" class="dropbtn">Majutus</a>
+                    <div class="dropdown-content">
+                        <a href="villa.html">Villa</a>
+                        <a href="kapteni-maja.html">Kapteni maja</a>
+                        <a href="jarvemaja.html">Järvemaja</a>
+                        <a href="rannamaja.html">Rannamaja</a>
+                    </div>
+                </li>
+                <li><a href="index.html#teenused">Teenused</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="kontakt-leht">
+        <h1>Võta meiega ühendust</h1>
+        
+        <div class="kontakt-grid">
+            <div class="kontakt-info-detail">
+                <h2>Kontaktinfo</h2>
+                <div class="info-rida">
+                    <i class="fas fa-phone"></i>
+                    <p>+372 53889871</p>
+                </div>
+                <div class="info-rida">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@ungrumajutus.ee</p>
+                </div>
+                <div class="info-rida">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Pühalepa vald, Hiiumaa</p>
+                </div>
+                
+                <div class="lahtiolekuajad">
+                    <h3>Vastuvõtuajad</h3>
+                    <p>Check-in: 16:00</p>
+                    <p>Check-out: kuni 12:00</p>
+                    <p>Muul ajal kokkuleppel</p>
+                </div>
+                
+                <div class="sotsiaalmeedia">
+                    <h3>Jälgi meid</h3>
+                    <a href="https://www.facebook.com/UngruHolidayHouses/" target="_blank" class="some-link">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/housesungruholiday/" target="_blank" class="some-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="kontakt-vorm">
+                <h2>Saada meile sõnum</h2>
+                <form id="kontaktVorm" onsubmit="return saidaSonum(event)">
+                    <div class="vorm-grupp">
+                        <label for="nimi">Nimi:</label>
+                        <input type="text" id="nimi" name="nimi" required>
+                    </div>
+                    
+                    <div class="vorm-grupp">
+                        <label for="email">E-post:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="vorm-grupp">
+                        <label for="telefon">Telefon:</label>
+                        <input type="tel" id="telefon" name="telefon">
+                    </div>
+                    
+                    <div class="vorm-grupp">
+                        <label for="teema">Teema:</label>
+                        <select id="teema" name="teema" required>
+                            <option value="">Vali teema</option>
+                            <option value="broneering">Broneering</option>
+                            <option value="info">Üldine info</option>
+                            <option value="tagasiside">Tagasiside</option>
+                            <option value="muu">Muu</option>
+                        </select>
+                    </div>
+                    
+                    <div class="vorm-grupp">
+                        <label for="sonum">Sõnum:</label>
+                        <textarea id="sonum" name="sonum" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="saada-nupp">Saada sõnum</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Ungru Puhkemajutus. Kõik õigused kaitstud.</p>
+    </footer>
+
+    <script src="kontakt.js"></script>
+</body>
+</html>
